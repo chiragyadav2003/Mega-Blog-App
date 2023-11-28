@@ -82,6 +82,7 @@ export class Service{
     }
 
     async getPosts(queries = [Query.equal("status", "active")]){
+        console.log("Posts", envData.appwriteDatabaseId, envData.appwriteCollectionId, envData.appwriteProjectId, envData.appwriteUrl, envData.appwriteBucketId)
         try {
             return await this.databases.listDocuments(
                 envData.appwriteDatabaseId,

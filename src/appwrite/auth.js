@@ -37,6 +37,10 @@ export class AuthService {
     }
 
     async getCurrentUser() {
+        console.log(envData)
+        console.log(envData.appwriteBucketId)
+        console.log(envData.appwriteUrl)
+        console.log(envData.appwriteProjectId)
         try {
             return await this.account.get();
         } catch (error) {
